@@ -17,8 +17,9 @@ int g_Min = -250;
 int adxl_Max = 1023;          //  analog has range from 0 to 1023
 int adxl_Min = 0;
 int adxl_Conv, adxl_Adj = 0;  //  2.5V -> 1023/2 -> 0g
-int offset[2] = {1, 2};       //  change offsets here, [0] is a multiplier
+float offset[2] = {1.2567, -0.6};       //  change offsets here, [0] is a multiplier
 //  adxl_Adj = offset[0]*adxl_Conv + offset[1]
+//  Hopefully it doesnt kill itself
 int max_Val = 0;              //  it will only be a positive number
 //  Or the sensor is flipped
 int counter = 0;              //  to reset max_val
